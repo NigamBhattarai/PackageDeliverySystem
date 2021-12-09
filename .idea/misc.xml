@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.26614583333333336" />
+        <entry key="app/src/main/res/drawable/gradient.xml" value="0.30572916666666666" />
+        <entry key="app/src/main/res/layout/activity_admin.xml" value="0.3523550724637681" />
+        <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_list_view.xml" value="0.3066123188405797" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.29483695652173914" />
+        <entry key="app/src/main/res/layout/fragment_add_customer.xml" value="0.32472826086956524" />
+        <entry key="app/src/main/res/layout/fragment_add_package.xml" value="0.32472826086956524" />
+        <entry key="app/src/main/res/layout/fragment_add_transit.xml" value="0.32472826086956524" />
+        <entry key="app/src/main/res/layout/fragment_admin_dashboard.xml" value="0.33605072463768115" />
+        <entry key="app/src/main/res/layout/fragment_cancel.xml" value="0.3523550724637681" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.2631578947368421" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3523550724637681" />
+        <entry key="app/src/main/res/layout/fragment_return.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_select_customer.xml" value="0.3066123188405797" />
+        <entry key="app/src/main/res/layout/fragment_track.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_transit_package.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_view_packages.xml" value="0.35572916666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

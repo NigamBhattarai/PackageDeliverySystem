@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    tools:context=".adminpanel.AddPackageFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addPackageTitle"
+                    android:layout_width="340dp"
+                    android:layout_height="45dp"
+                    android:paddingTop="10dp"
+                    android:text="Add a package"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/editPackageBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:src="@drawable/ic_edit_foreground"
+                    android:tooltipText="Edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="73dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Name"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/addPackageName"
+                        android:layout_width="279dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Name"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sender"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/addPackageSender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Sent by"
+                        android:enabled="false"
+                        android:inputType="textPersonName" />
+
+                    <ImageButton
+                        android:id="@+id/selectSenderBtn"
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ECECEC"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add_foreground" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Receiver"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/addPackageReceiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:hint="Received by"
+                        android:inputType="textPersonName" />
+
+                    <ImageButton
+                        android:id="@+id/selectReceiverBtn"
+                        android:layout_width="7dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ECECEC"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add_foreground" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Start Transit"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/addPackageDeliveryFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:hint="Deliver from"
+                        android:inputType="textPersonName" />
+
+                    <ImageButton
+                        android:id="@+id/selectStartTransitBtn"
+                        android:layout_width="19dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ECECEC"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add_foreground" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delivery Transit"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/addPackageDeliveryTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:hint="Deliver to"
+                        android:inputType="textPersonName" />
+
+                    <ImageButton
+                        android:id="@+id/selectDeliveryTransitBtn"
+                        android:layout_width="28dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#ECECEC"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add_foreground" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="74dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Severe"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:layout_width="257dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/addPackageSevereYes"
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/addPackageSevereNo"
+                            android:layout_width="122dp"
+                            android:layout_height="wrap_content"
+                            android:text="No" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Weight( Kgs )"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/addPackageWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Weight"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delivery in ( Days )"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/addPackageDeliveryDays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Number of Days"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/savePackageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save" />
+
+                <Button
+                    android:id="@+id/deletePackageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/teal_700"
+                    android:text="Delete"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
