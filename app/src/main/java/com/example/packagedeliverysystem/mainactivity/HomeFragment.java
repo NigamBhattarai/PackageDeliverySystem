@@ -120,38 +120,39 @@ public class HomeFragment extends Fragment {
     }
 
     private void initSelectPackage() {
-        selectPackage.setTitle("Select a package:-");
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(rootView.getContext(), android.R.layout.select_dialog_singlechoice);
-        allPackages = sPackage.getAllActiveAsJSON();
-        try {
-            for (JSONObject jsonObject : allPackages) {
-                arrayAdapter.add(jsonObject.getString("name"));
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        selectPackage.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-
-        selectPackage.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int i) {
-                try {
-                    selectedPackageId = allPackages.get(i).getInt("id");
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
+        if(sPackage.numberOfRows()>0) {
+            selectPackage.setTitle("Select a package:-");
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(rootView.getContext(), android.R.layout.select_dialog_singlechoice);
+            allPackages = sPackage.getAllActiveAsJSON();
+            try {
+                for (JSONObject jsonObject : allPackages) {
+                    arrayAdapter.add(jsonObject.getString("name"));
                 }
-                checkIsSelected();
-                dialog.dismiss();
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-        });
+
+            selectPackage.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+            selectPackage.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int i) {
+                    try {
+                        selectedPackageId = allPackages.get(i).getInt("id");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    checkIsSelected();
+                    dialog.dismiss();
+                }
+            });
+        }
     }
 
     private void checkIsSelected() {
