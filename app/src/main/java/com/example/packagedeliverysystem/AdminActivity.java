@@ -135,6 +135,7 @@ public class AdminActivity extends AppCompatActivity {
 //            2 : Good
 //            3 : Done
 //            4 : Bad
+//            5 : Unknown
 
             deliveryStatus.insert("Confirmed", 1);
             deliveryStatus.insert("Collected", 1);
@@ -149,7 +150,7 @@ public class AdminActivity extends AppCompatActivity {
             deliveryStatus.insert("Return declined", 4);
             deliveryStatus.insert("Return Accepted", 2);
             deliveryStatus.insert("Cancelled", 4);
-            deliveryStatus.insert("Unknown", 4);
+            deliveryStatus.insert("Unknown", 5);
         }
     }
 }

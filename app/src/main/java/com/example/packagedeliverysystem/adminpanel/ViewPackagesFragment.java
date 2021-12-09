@@ -1,8 +1,12 @@
 package com.example.packagedeliverysystem.adminpanel;
 
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.example.packagedeliverysystem.CustomAdapter;
 import com.example.packagedeliverysystem.R;
 import com.example.packagedeliverysystem.models.Package;
 
@@ -21,6 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ViewPackagesFragment extends Fragment {
@@ -30,9 +36,11 @@ public class ViewPackagesFragment extends Fragment {
 
     View rootView;
     ListView packageListView;
+    RecyclerView packageRecyclerView;
     EditText searchQuery;
     ArrayList<String> allPackages;
     ArrayAdapter<String> itemsAdapter;
+    CustomAdapter rcAdapter;
 
     private String mParam1;
     private String mParam2;
@@ -89,8 +97,12 @@ public class ViewPackagesFragment extends Fragment {
         Package aPackage = new Package(rootView.getContext());
         allPackages = aPackage.getAll();
         itemsAdapter = new ArrayAdapter<>(rootView.getContext(), android.R.layout.simple_list_item_1, allPackages);
+//        rcAdapter = new CustomAdapter(rootView.getContext(), allPackages);
+//        packageRecyclerView = rootView.findViewById(R.id.packageRecyclerView);
+//        packageRecyclerView.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
         packageListView = rootView.findViewById(R.id.packageListView);
-        packageListView.setAdapter(itemsAdapter);
+//        packageListView.setAdapter(itemsAdapter);
+//        packageRecyclerView.setAdapter(rcAdapter);
     }
 
 

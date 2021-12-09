@@ -143,7 +143,7 @@ public class Timeline extends SQLiteOpenHelper {
         ArrayList<JSONObject> obj = new ArrayList<>();
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from "+TABLE_NAME+" where "+KEY_PACKAGE_ID+" = "+package_id, null );
+        Cursor res =  db.rawQuery( "select * from "+TABLE_NAME+" where "+KEY_PACKAGE_ID+" = "+package_id+" order by "+KEY_ARRIVAL_DATE+" desc", null );
         res.moveToFirst();
 
         while(res.isAfterLast() == false){
