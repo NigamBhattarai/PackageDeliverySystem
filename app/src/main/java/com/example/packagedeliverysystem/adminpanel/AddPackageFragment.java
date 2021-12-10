@@ -180,7 +180,7 @@ public class AddPackageFragment extends Fragment {
                     if(isEdit) {
                         //For Editing the selected customer
                         Package aPackage = new Package(selectedPackageId, rootView.getContext());
-                        aPackage.update(selectedPackageId, name, severe.toString(), weight, numberofdays, selectedSenderId, selectedReceiverId, selectedStartId, selectedDeliveryId, pref.getInt("userid", -1), 1);
+                        aPackage.update(selectedPackageId, name, severe.toString(), weight, numberofdays, selectedSenderId, selectedReceiverId, selectedStartId, selectedDeliveryId, pref.getInt("userid", -1), aPackage.getDelivery_status_id());
                         Toast.makeText(rootView.getContext(), "Package Updated Successfully.", Toast.LENGTH_LONG).show();
                         clearAllFields();
                     }

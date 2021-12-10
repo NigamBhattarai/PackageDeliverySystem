@@ -211,7 +211,6 @@ public class HomeFragment extends Fragment {
                 Timeline timeline = new Timeline(rootView.getContext());
                 timeline.insert(new Date(), selectedPackageId, new DeliveryStatus(rootView.getContext()).getIdByName("Requested for return"), new Timeline(rootView.getContext()).getTransitIdByPackage(selectedPackageId));
                 Toast.makeText(rootView.getContext(), "Package Applied For Return Successfully!", Toast.LENGTH_LONG).show();
-                clearPackage();
                 dialogInterface.dismiss();
             }
         });

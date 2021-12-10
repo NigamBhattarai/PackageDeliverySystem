@@ -7,7 +7,6 @@ import android.transition.TransitionInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -17,8 +16,6 @@ import com.example.packagedeliverysystem.adminpanel.AddCustomerFragment;
 import com.example.packagedeliverysystem.adminpanel.AddPackageFragment;
 import com.example.packagedeliverysystem.adminpanel.AddTransitFragment;
 import com.example.packagedeliverysystem.adminpanel.TransitPackageFragment;
-import com.example.packagedeliverysystem.adminpanel.ViewPackagesFragment;
-import com.example.packagedeliverysystem.mainactivity.HomeFragment;
 import com.example.packagedeliverysystem.models.Company;
 import com.example.packagedeliverysystem.models.DeliveryStatus;
 
@@ -64,15 +61,6 @@ public class AdminActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.adminFragmentContainer, addPackageFragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
-
-    public void openViewPackages(View view) {
-        ViewPackagesFragment viewPackagesFragment = new ViewPackagesFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.adminFragmentContainer, viewPackagesFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
